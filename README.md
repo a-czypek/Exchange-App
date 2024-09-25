@@ -36,6 +36,7 @@ The following steps outline the key stages in the development of the application
 4. **User-Driven Features:**
 - Allowing users to switch between a summarized view (e.g., top global currencies) and a detailed view of all available currencies.
 - Enabling quick calculations between different currencies using the calculator feature.
+
 ## Technologies Used:
 - **React:** A JavaScript library for building the user interface. React was chosen for its modular component-based architecture, making it easy to manage complex interactions and state.
 - **JavaScript (ES6+):** The core programming language used to handle API requests, user inputs, and data processing.
@@ -44,6 +45,11 @@ The following steps outline the key stages in the development of the application
   - **IPInfo API:** Used for determining the user’s location based on their IP address.
   - **ExchangeRate API:** Provides up-to-date currency conversion rates.
 - **Asynchronous Fetch:** Used to retrieve data from the APIs without blocking the user interface, ensuring a smooth and fast experience.
+
+  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
   
 ## How to Run the Application
 To run the Multi-Currency Exchange Application locally on your machine, follow these steps:
