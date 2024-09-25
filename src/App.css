@@ -1,38 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sedan:ital@0;1&display=swap');
+
+:root {
+    --font-playfair: "Playfair Display", serif;
+    --font-roboto: "Roboto Mono", monospace;
+    --bg-gradient: linear-gradient(to right, #ff5f6d, #ffc371);
+    --primary-color: #000;
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --button-bg-color: #f0f0f0;
+    --button-hover-bg-color: #e0e0e0;
+    --button-border-color: #ccc;
+}
+
+body {
+    font-family: var(--font-roboto), sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    margin: 20px;
+    max-width: 900px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family: var(--font-playfair);
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    background-image: linear-gradient(to right, red, yellow);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App h1:hover {
+    transform: scale(1.05);
 }
 
-.App-link {
-  color: #61dafb;
+.interactive-exchange {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.interactive-exchange button {
+    margin: 30px 0 0 0;
+}
+
+.currency-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.currency-card {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    min-width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px;
+}
+
+.currency-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.exchange-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.top-currencies-block, .calculator-block {
+    flex: 1;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.top-currencies-block:hover,
+.calculator-block:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.top-currencies-block {
+    max-width: 400px;
+}
+
+.calculator-block {
+    max-width: 400px;
+}
+
+.top-currencies-block table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.top-currencies-block table th,
+.top-currencies-block table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.top-currencies-block table th {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.top-currencies-block table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.currency-calculator {
+    text-align: center;
+}
+
+.currency-calculator h2 {
+    font-family: var(--font-playfair);
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+.currency-calculator label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+.currency-calculator select,
+.currency-calculator input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.currency-calculator select:focus,
+.currency-calculator input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.currency-calculator button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Dodano efekt */
+    margin-bottom: 15px;
+}
+
+.currency-calculator button:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+.interactive-exchange button,
+.top-currencies-block button {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--button-border-color);
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.interactive-exchange button:hover,
+.top-currencies-block button:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: translateY(-3px);
+}
+
+.go-back-button {
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+    color: var(--text-color);
+    border: 1px solid var(--button-border-color);
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 220px;
+    margin: 20px auto;
+    display: block;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Dodano więcej efektów */
+    box-shadow: var(--box-shadow);
+    font-weight: 600;
+}
+
+.go-back-button:hover {
+    background: linear-gradient(to right, #e0e0e0, #f0f0f0);
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .exchange-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-currencies-block, .calculator-block {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.currency-search {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.currency-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.view-all-button {
+    margin: 0 0 30px 0;
 }
