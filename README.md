@@ -48,7 +48,7 @@ The following steps outline the key stages in the development of the application
 ## How to Run the Application
 To run the Multi-Currency Exchange Application locally on your machine, follow these steps:
 
-1. **Install Dependencies:
+1. **Install Dependencies:**
 - Ensure that you have **Node.js** and **npm** installed on your machine.
 - Navigate to the project directory and run the following command to install the necessary dependencies:
   
