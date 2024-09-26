@@ -11,8 +11,8 @@ Integrates with the ExchangeRate API to provide up-to-date exchange rates for ma
 
 3.**Interactive Currency Tools:**
 - **Top Currencies Overview:** Quick comparisons between local and the most traded currencies (USD, EUR, JPY, etc.).
--**Currency Calculator:** Real-time currency conversion between the user's local and foreign currencies.
--**All Currencies View:** A detailed list of all available exchange rates with toggle options for easy navigation.
+- **Currency Calculator:** Real-time currency conversion between the user's local and foreign currencies.
+- **All Currencies View:** A detailed list of all available exchange rates with toggle options for easy navigation.
   
 ## Development Process:
 
